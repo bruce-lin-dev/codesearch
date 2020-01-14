@@ -91,9 +91,9 @@ func makePostEntry(trigram, fileid uint32) postEntry {
 // bytes, if it contains a line longer than maxLineLen bytes,
 // or if it contains more than maxTextTrigrams distinct trigrams.
 const (
-	maxFileLen      = 1 << 30
-	maxLineLen      = 2000
-	maxTextTrigrams = 20000
+	maxFileLen      = 1 << 32
+	maxLineLen      = 100000
+	maxTextTrigrams = 400000
 )
 
 // AddPaths adds the given paths to the index's list of paths.
